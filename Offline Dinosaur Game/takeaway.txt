@@ -1,0 +1,36 @@
+> querySelector(); for further JS action
+  you can use a canvas, or choose not to, 
+  we'll get HTML element by querySelector(); to do further manipulation
+
+> htmlElement.style.bottom = .. manipulate css properties
+
+> DOMContentLoaded - safe method to load JS after html finished loading
+  as we need to select certain elements from HTML,
+  to avoid scenario where HTML not finished loaded and we run JS, not able to fetch desired ele.
+  add a layer of check using event: DOMContentLoaded
+
+> to avoid another jump happens when jump happens, 
+  no jump when jumpStatus = true
+
+> setInterval for position-change event,
+  clearInterval when certain height is reached (or other criteria)
+
+> clearTimeout
+
+> window.screen.width
+  window.innerWidth
+  document.documentElement.clientWidth
+  https://stackoverflow.com/questions/1248081/how-to-get-the-browser-viewport-dimensions
+  <body onresize="myFunction()">
+  w = w || window; (take the current window, if undefined, use window)
+
+> getComputedStyle(dino).bottom.replace("px","");
+  to read CSS properties value into javascript,
+  -> dino_y = getComputedStyle(dino).bottom.replace("px","");
+  -> cannot use dino.style.bottom (this is only to write)
+
+> to reload the page,
+  onClick="document.location.reload(true)"
+
+> visibility: hidden; //hides the element, but it still takes up space in the layout.
+  display: none; // turns off the display and removes the element completely from the document.
