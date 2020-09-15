@@ -1,0 +1,72 @@
+GAME FLOW DRAFT
+[9 square]
+1. initialize 
+-> player x goes first
+-> let player = 'X'
+-> let win = 0;
+-> const player_icon = {'X': 'https://images.vexels.com/media/users/3/155473/isolated/preview/faa3172dd52035d0c227d7ecab4d6024-x-cross-doodle-by-vexels.png', 'O':''}
+-> player_x, player_y = []
+
+-> hard code win array
+const win_arr = [
+[1,2,3],
+[4,5,6],
+[7,8,9],
+[1,4,6],
+[2,5,8],
+[3,6,9],
+[1,5,9],
+[3,5,7],
+]
+
+2. onclick
+-> update image, element.css.background= 'url'
+-> fetch which grid is clicked, by assigning each grid an id, and return the id after clicked
+--> click_grid = event.srcElement.id
+
+-> append click_grid to player's array
+
+-> check if the player wins! by comparing win array and player array
+// do not need to check if array length less than 3
+if len(player_x) < 3: 
+	return false
+else:
+	for (let i=0; i < win_arr.length; i ++){
+	// let check_1 = player.indexOf(win_arr[i][0] > -1
+	// if all check is true, update win to 1, break the loop
+}
+
+-> if not win, and if grids have been filled, then it is a tie!
+// len(player_x) + len(player_y)
+
+-> print win or tie message
+
+-> if not win and tie, proceed to the next player
+player = (player == 'X') ? 'O' : 'X';
+
+
+[ERROR & LEARNING]
+> check window variable
+--> for (var b in window){console.log(b);}
+
+> @developer console, when console.log() certain app.js elements, it's missing!
+--> need to console.log in local file
+
+> e.target: return targeted element html
+  all_query_selector_returns.indexOf(e.target)
+
+> difference between NodeList and Array
+--> NodeList is returned from browser specific API, 
+    for example returned from querySelectorAll,
+    they are array like but may lack certain array method
+    array func can be called by converting them to array
+    (1. Array.from(); 2. [...NodeList])
+
+> parseInt(e.srcElement.id);
+
+> how to create no gap between inline block??
+--> font-size: 0;
+
+[FANCY FEATURE CAN BE IMPLEMENTED IN THE FUTURE]
+> PLAY w AI
+> add connecting line across 3 grids when win
