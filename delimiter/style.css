@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+
+
+textarea {
+	width: 15vw;
+	height: 60vh;
+	display: inline-block;
+}
+
+
+.buttons {
+	width: 15vw;
+	display: inline-block;
+	text-align: center;
+}
+
+.delim {
+	width: 30px;
+}
+
+ul {
+	margin: 0;
+	padding:0;
+}
+
